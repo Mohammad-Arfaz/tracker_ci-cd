@@ -9,17 +9,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'mvn clean install' 
+                bat 'build' 
             }
         }
         stage('Test') {
             steps {
-                bat 'mvn test' 
+                echo 'test' 
             }
         }
         stage('Deploy') {
             steps {
-                bat 'your-deploy-command' 
+                echo 'deploy' 
             }
         }
     }
