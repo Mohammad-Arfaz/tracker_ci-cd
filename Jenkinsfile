@@ -9,17 +9,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'your-windows-build-command' 
+                bat 'mvn clean install' 
             }
         }
         stage('Test') {
             steps {
-                bat 'your-windows-test-command' 
+                bat 'mvn test' 
             }
         }
         stage('Deploy') {
             steps {
-                bat 'your-windows-deploy-command' 
+                bat 'your-deploy-command' 
             }
         }
     }
