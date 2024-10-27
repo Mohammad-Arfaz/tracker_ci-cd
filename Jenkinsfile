@@ -1,5 +1,5 @@
 pipeline {
-    agent any 
+    agent any
 
     stages {
         stage('Checkout') {
@@ -9,23 +9,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                // Add your build commands here
-                sh 'make build'
+                bat 'your-windows-build-command' 
             }
         }
         stage('Test') {
             steps {
-                // Add your testing commands here
-                sh 'make test'
+                bat 'your-windows-test-command' 
             }
         }
         stage('Deploy') {
             steps {
-                // Add your deployment commands here
-                sh 'make deploy'
+                bat 'your-windows-deploy-command' 
             }
         }
     }
-
 }
-
